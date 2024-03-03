@@ -39,8 +39,6 @@ UPDATE [Restaurants].[dbo].[US_Merchant - sheet1]
 SET city_name = SUBSTRING(full_address, CHARINDEX(',', full_address) + 2, CHARINDEX(',', full_address, 
 CHARINDEX(',', full_address) + 1) - CHARINDEX(',', full_address) - 2)
 
-
-
 -- Getting a table for a top 10 francises visualization. 
 Select top(10) restaurant_name, Count(restaurant_name) as Total_Stores, Round(AVG(rate_avg),2) as average_rate
 FROM [Restaurants].[dbo].[US_Merchant - sheet1]
